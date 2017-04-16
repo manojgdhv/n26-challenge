@@ -20,7 +20,7 @@ Used rest easy implation of RestFul architecture along with spring 4.
 
 <b>CR1:  Get statistics should always return in constant time and space</b>
 
-Used ConcurrentSkipListMap which guarantees average O(log(n)) performance. Also provided methods like headMap(), subMap() and tailMap() by using which we can fetch topN or bottomN elements.
+Used ConcurrentSkipListMap which guarantees average O(log(n)) performance. Also provided methods like headMap(), subMap() and tailMap() by using which we can fetch topN or bottomN elements. Also used DoubleSummaryStatistics to efficiently calculate statistical data using parllel stream which provides in built support for required statistical methods.
 
 <b>CR2: API have to be thread safe </b>
 
