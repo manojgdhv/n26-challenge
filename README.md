@@ -12,6 +12,7 @@ Technogies used
 Used rest easy implation of RestFul architecture along with spring 4. 
 
 Following are the requirement and implementation details
+
 CR1:  Get statistics should always return in constant time and space
 Used ConcurrentSkipListMap which guarantees average O(log(n)) performance. Also provided methods like headMap(), subMap() and tailMap() by using which we can fetch topN or bottomN elements.
 
@@ -32,18 +33,26 @@ Added  JUnit test cases for controllers, facade and services.
 RestFul API responsible for add transaction
 
 Request Method: POST
+
 Request URI: http://<BASE_PATH>/webservices/ transactions
+
 Request body:
+
 {
 	"timestamp":1592246487000,
 	"amount":5000
 }
 
 2. Get statistics
+
 Request Method: GET
+
 Request URI: http://<BASE_PATH>/webservices/statistics?last_n_seconds_transactions=<no_last_transactions>
+
 Query param: last_n_seconds_transactions default to 60 seconds if not provided
+
 Request body:
+
 {
   "count": 2,
   "max": 5000,
@@ -53,5 +62,7 @@ Request body:
 }
 
 <sub>Maven commands</sub>
+
 1.  Build : mvn clean install
+
 2. Test : mvn test
