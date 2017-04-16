@@ -4,9 +4,13 @@ RestFul API to generate last 60 seconds transaction details.
 
 # Implementation
 Technogies used
+
 -Rest easy
+
 -Spring
+
 -Junit
+
 -Java 8
 
 Used rest easy implation of RestFul architecture along with spring 4. 
@@ -27,7 +31,7 @@ Added  JUnit test cases for controllers, facade and services.
 
 # How to run 
 
-<sub>API Specification</sub>
+<b>API Specification</b>
 
 1. Add transaction
 RestFul API responsible for add transaction
@@ -61,8 +65,8 @@ Request body:
   "avg": 5000
 }
 
-<sub>Maven commands</sub>
+Maven commands
 
-1.  Build : mvn clean install
+1. Build : mvn clean install
 
 2. Test : mvn test
