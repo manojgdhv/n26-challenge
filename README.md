@@ -19,15 +19,19 @@ Used rest easy implation of RestFul architecture along with spring 4.
 <b>Following are the requirement and implementation details</b>
 
 <b>CR1:  Get statistics should always return in constant time and space</b>
+
 Used ConcurrentSkipListMap which guarantees average O(log(n)) performance. Also provided methods like headMap(), subMap() and tailMap() by using which we can fetch topN or bottomN elements.
 
 <b>CR2: API have to be thread safe </b>
+
 ConcurrentSkipListMap assures thread safety . Along with it add transaction and get statistics methods are also synchronised to achieve thread safety. 
 
 <b>CR3: Time discrepancy should be handled</b>
+
 ConcurrentSkipListMap stores transaction in a sorted manner, so any transaction is added we can expect data sorted based timestamp.
 
 <b>CR4: Code should be testable</b>
+
 Added  JUnit test cases for controllers, facade and services.
 
 # How to run 
