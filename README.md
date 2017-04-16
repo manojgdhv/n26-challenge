@@ -2,7 +2,7 @@
 
 RestFul API to generate last 60 seconds transaction details.
 
-#Implementation
+# Implementation
 Technogies used
 -Rest easy
 -Spring
@@ -24,7 +24,8 @@ ConcurrentSkipListMap stores transaction in a sorted manner, so any transaction 
 CR4: Code should be testable
 Added  JUnit test cases for controllers, facade and services.
 
-#How to run 
+# How to run 
+
 <sub>API Specification</sub>
 
 1. Add transaction
