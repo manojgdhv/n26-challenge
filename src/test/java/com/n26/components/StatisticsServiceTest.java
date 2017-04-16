@@ -1,5 +1,6 @@
 package com.n26.components;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,14 +17,17 @@ public class StatisticsServiceTest {
 	public void testGetStatistics() {
 		StatisticsService statisticsService = new StatisticsService();
 	
+		//Transaction for current time
 		List<Transaction> transactions = new ArrayList<Transaction>();
 		Transaction t1 = new Transaction();
 		t1.setAmount(1000D);
-		t1.setTimestamp(1492188482000L);
+		long currentTime = Instant.now().toEpochMilli();
+		t1.setTimestamp(currentTime);
 		
+		//Transaction before 10 seconds
 		Transaction t2 = new Transaction();
 		t2.setAmount(2000D);
-		t2.setTimestamp(1492188482000L);
+		t2.setTimestamp(currentTime - (10 * 1000));
 		
 		transactions.add(t1);
 		transactions.add(t2);
